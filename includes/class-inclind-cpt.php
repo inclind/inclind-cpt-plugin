@@ -149,7 +149,7 @@ class Inclind_Cpt {
 
 		$plugin_cpt_register = new Inclind_Cpt_Register();
 
-		$this->loader->add_action( 'init', $plugin_cpt_register, 'register_post_types' );
+		$this->loader->add_action( 'init', $plugin_cpt_register, 'create_post_types' );
 
 	}
 
