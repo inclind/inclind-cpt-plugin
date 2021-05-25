@@ -1,0 +1,22 @@
+{
+  "name": "inclind-cpt",
+  "version": "1.0.0",
+  "description": "`inclind-cpt-plugin` is a WordPress plugin that was developed to remove the hassle of having to inject CPTs in themes or use bloated and untrustworthy plugins.",
+  "main": "index.js",
+  "scripts": {
+    "build:zip": "node release.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inclind/inclind-cpt-plugin.git"
+  },
+  "author": "Carson Schulz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inclind/inclind-cpt-plugin/issues"
+  },
+  "homepage": "https://github.com/inclind/inclind-cpt-plugin#readme",
+  "devDependencies": {
+    "archiver": "^5.3.0"
+  }
+}
