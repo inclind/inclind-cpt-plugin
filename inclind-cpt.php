@@ -14,10 +14,10 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Inclind CPT
- * Plugin URI:        https://example.com/
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Plugin URI:        https://github.com/inclind/inclind-cpt-plugin
+ * Description:       This plugin was created to allow the creation of CPTs without the use of bloated plugins.
  * Version:           1.0.0
- * Author:            Carson Schulz
+ * Author:            Inclind
  * Author URI:        https://www.inclind.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
