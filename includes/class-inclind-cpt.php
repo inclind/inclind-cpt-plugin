@@ -76,6 +76,7 @@ class Inclind_Cpt {
 
 		$this->load_dependencies();
 		$this->set_locale();
+		$this->define_register_hooks();
 
 	}
 
@@ -109,6 +110,11 @@ class Inclind_Cpt {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-inclind-cpt-i18n.php';
 
+		/**
+		 * The class responsible for registering the custom post types.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-inclind-cpt-register.php';
+
 		$this->loader = new Inclind_Cpt_Loader();
 
 	}
@@ -127,6 +133,23 @@ class Inclind_Cpt {
 		$plugin_i18n = new Inclind_Cpt_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
+
+	}
+
+	/**
+	 * Define the locale for this plugin for internationalization.
+	 *
+	 * Uses the Inclind_Cpt_i18n class in order to set the domain and to register the hook
+	 * with WordPress.
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 */
+	private function define_register_hooks() {
+
+		$plugin_cpt_register = new Inclind_Cpt_Register();
+
+		$this->loader->add_action( 'init', $plugin_cpt_register, 'register_post_types' );
 
 	}
 
